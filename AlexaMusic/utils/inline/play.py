@@ -52,7 +52,7 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
                 callback_data=f"add_playlist {videoid}",
             ),
             InlineKeyboardButton(
-                text="Owner", url=f"https://t.me/Usern4meDoesNotExist404"
+                text="Owners", url=f"https://t.me/Usern4meDoesNotExist404"
             ),
         ],
         [
@@ -60,13 +60,11 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
                 text=_["PL_B_3"],
                 callback_data=f"PanelMarkup {videoid}|{chat_id}",
             ),
-            InlineKeyboardButton(text="Support", url=f"https://t.me/SpotifyStream_Id"),
+            InlineKeyboardButton(text="Support", url=f"https://t.me/SpotifyStreamMusic"),
         ],
         [
-            InlineKeyboardButton(
-                text=f"Spotify Stream",
-                url=f"https://t.me/ManageMusic_bot",
-            )
+            InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close"
+            ),
         ],
     ]
     return buttons
@@ -86,14 +84,14 @@ def telegram_markup_timer(_, chat_id, played, dur):
                 text=_["PL_B_2"],
                 callback_data=f"add_playlist {videoid}",
             ),
-            InlineKeyboardButton(text="Owner", url=f"https://t.me/Usern4meDoesNotExist404"),
+            InlineKeyboardButton(text="Owners", url=f"https://t.me/Usern4meDoesNotExist404"),
         ],
         [
             InlineKeyboardButton(
                 text=_["PL_B_3"],
                 callback_data=f"PanelMarkup None|{chat_id}",
             ),
-            InlineKeyboardButton(text="Support", url=f"https://t.me/SpotifyStream_Id"),
+            InlineKeyboardButton(text="Support", url=f"https://t.me/SpotifyStreamMusic"),
         ],
     ]
     return buttons
@@ -109,14 +107,14 @@ def stream_markup(_, videoid, chat_id):
                 text=_["PL_B_2"],
                 callback_data=f"add_playlist {videoid}",
             ),
-            InlineKeyboardButton(text="Owner", url=f"https://t.me/Usern4meDoesNotExist404"),
+            InlineKeyboardButton(text="Info", url=f"https://t.me/SpotifyStreamMusic/64"),
         ],
         [
             InlineKeyboardButton(
                 text=_["PL_B_3"],
                 callback_data=f"PanelMarkup None|{chat_id}",
             ),
-            InlineKeyboardButton(text="Support", url=f"https://t.me/SpotifyStream_Id"),
+            InlineKeyboardButton(text="Owners", url=f"https://t.me/Usern4meDoesNotExist404"),
         ],
     ]
     return buttons
@@ -305,7 +303,7 @@ def panel_markup_1(_, videoid, chat_id):
         ],
         [
             InlineKeyboardButton(
-                text="↻ ʙᴀᴄᴋ ↻",
+                text="ʙᴀᴄᴋ",
                 callback_data=f"MainMarkup {videoid}|{chat_id}",
             ),
         ],
@@ -324,14 +322,13 @@ def queue_markup(_, videoid, chat_id):
                 callback_data=f"ADMIN Resume|{chat_id}",
             ),
             InlineKeyboardButton(text="II", callback_data=f"ADMIN Pause|{chat_id}"),
-            InlineKeyboardButton(text="☆", callback_data=f"add_playlist {videoid}"),
+            InlineKeyboardButton(text="⟲", callback_data=f"add_playlist {videoid}"),
             InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
             InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
         ],
         [
-            InlineKeyboardButton(
-                text="〆 ᴄʟᴏsᴇ 〆", callback_data=f"ADMIN CloseA|{chat_id}"
-            )
+            InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close"
+            ),
         ],
     ]
     return buttons
