@@ -31,8 +31,8 @@ def setting_markup(_):
         ],
         [
             InlineKeyboardButton(
-                text="• Sᴜᴩᴩᴏʀᴛ •",
-                url="https://t.me/Shayri_Music_Lovers",
+                text="Support",
+                url="https://t.me/SpotifyStream_Id",
             ),
             InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close"),
         ],
